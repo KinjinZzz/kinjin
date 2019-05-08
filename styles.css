@@ -10,6 +10,7 @@ body {
 
 .bg {
   height: 40vh;
+  min-width: 80vw;
 }
 
 nav {
