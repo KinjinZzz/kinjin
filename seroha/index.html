@@ -1,44 +1,58 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-p {
-  text-align: center;
-  font-size: 60px;
-  margin-top: 0px;
-}
-</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    p {
+      text-align: center;
+      color: #ffa7c4;
+      font-size: 60px;
+      margin-top: 0px;
+    }
+    body {
+      flex-direction: column;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="../normalize.css" />
+  <link rel="stylesheet" type="text/css" href="../styles.css" />
+  <link rel="shortcut icon" href="fav.ico" />
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
 </head>
+
 <body>
 
-<p id="counter"></p>
+  <p id="counter"></p>
 
-<iframe src="https://clips.twitch.tv/embed?clip=CrowdedTentativeSardineYouWHY-SrpAW06fT0ae4TBN&parent=https://kinjin.me/seroha/" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+  <iframe width="520" height="315" allow="autoplay; encrypted-media"
+    src="https://www.youtube.com/embed/JgJOWlf7hRQ?autoplay=1">
+  </iframe>
 
-<script>
-const countDownDate = new Date("Apr 24, 2021 20:00:00").getTime();
+  <script>
+    const countDownDate = new Date("Apr 23, 2021 20:00:00").getTime();
 
-const x = setInterval(function() {
+    const x = setInterval(function () {
 
-  const now = new Date().getTime();
+      const now = new Date().getTime();
 
-  const distance = countDownDate - now;
+      const distance = countDownDate - now;
 
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  document.getElementById("counter").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+      document.getElementById("counter").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("counter").innerHTML = "VSE";
-  }
-}, 1000);
-</script>
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("counter").innerHTML = "VSE";
+      }
+    }, 1000);
+  </script>
 
 </body>
+
 </html>
